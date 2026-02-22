@@ -267,6 +267,10 @@ msgstr "관측"
 
 #: PiFinder/ui/gpsstatus.py:186
 msgid "Stay on this screen"
+msgstr "신속한 GPS 수신을 위해"
+
+#: PiFinder/ui/gpsstatus.py:195
+msgid "for quicker lock"
 msgstr "현재 화면을 켜두세요"
 
 #: PiFinder/ui/gpsstatus.py:195
