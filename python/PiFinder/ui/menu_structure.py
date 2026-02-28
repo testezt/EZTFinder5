@@ -31,7 +31,7 @@ s = s
 del s
 
 pifinder_menu = {
-    "name": "PiFinder",
+    "name": "EZTFinder",
     "class": UITextMenu,
     "select": "single",
     "start_index": 2,
