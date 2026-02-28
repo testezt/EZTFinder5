@@ -885,7 +885,7 @@ pifinder_menu = {
                     ],
                 },
                 {
-                    "name": _("PiFinder Type"),
+                    "name": _("EZTFinder Type"),
                     "class": UITextMenu,
                     "select": "single",
                     "config_option": "screen_direction",
