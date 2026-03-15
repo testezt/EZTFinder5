@@ -71,6 +71,7 @@ keypad_pwm = None
 previous_display_brightness = 0
 cfg = config.Config()
 
+
 # On/Off Switch GPIO
 on_off_swtich = 6
 
@@ -107,6 +108,7 @@ def off_light() :
         keypad_pwm.change_duty_cycle(0)
     
     display_device.set_brightness(0)
+
 
 def init_keypad_pwm():
     # TODO: Keypad pwm class that can be faked maybe?

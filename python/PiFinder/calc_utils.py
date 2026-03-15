@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import datetime
 import pytz
 import math
 import numpy as np
@@ -30,8 +30,8 @@ class FastAltAz:
     def __init__(self, lat, lon, dt):
         self.lat = lat
         self.lon = lon
-        
-        self.dt = dt.astimezone(timezone.utc)
+        self.dt = dt
+
         j2000 = datetime(2000, 1, 1, 12, 0, 0)
         utc_tz = pytz.timezone("UTC")
         j2000 = utc_tz.localize(j2000)
@@ -96,6 +96,11 @@ def dec_to_deg(dec, dec_m, dec_s):
 
 
 def dec_to_dms(dec):
+    try:
+        dec = float(dec)
+    except TypeError:
+        return 0, 0, 0
+
     degree = int(dec)
     fractional_degree = abs(dec - degree)
     minute = int(fractional_degree * 60)
@@ -104,6 +109,11 @@ def dec_to_dms(dec):
 
 
 def ra_to_hms(ra):
+    try:
+        ra = float(ra)
+    except TypeError:
+        return 0, 0, 0
+            
     if ra < 0.0:
         ra = ra + 360
     mm, hh = math.modf(ra / 15.0)
