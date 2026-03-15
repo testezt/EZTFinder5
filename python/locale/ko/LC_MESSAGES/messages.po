@@ -140,8 +140,8 @@ msgid "Test Mode"
 msgstr "테스트모드"
 
 #: PiFinder/ui/callbacks.py:79
-msgid "종료중"
-msgstr "Arrêt"
+msgid "Shutting Down"
+msgstr "종료중"
 
 #: PiFinder/ui/callbacks.py:88 PiFinder/ui/callbacks.py:96
 msgid "Restarting..."
@@ -273,10 +273,6 @@ msgstr "신속한 GPS 수신을 위해"
 msgid "for quicker lock"
 msgstr "현재 화면을 켜두세요"
 
-#: PiFinder/ui/gpsstatus.py:195
-msgid "신속한 설정을 위해"
-msgstr ""
-
 #: PiFinder/ui/gpsstatus.py:206
 
 msgid "Lock Type:"
@@ -395,7 +391,7 @@ msgstr "조건들..."
 #: PiFinder/ui/log.py:304
 
 msgid "Logged!"
-msgstr "접속됨"
+msgstr "기록됨"
 
 #: PiFinder/ui/menu_manager.py:77
 
@@ -757,8 +753,8 @@ msgid "AP Mode"
 msgstr "AP 모드"
 
 #: PiFinder/ui/menu_structure.py:831
-msgid "PiFinder Type"
-msgstr "PiFinder형식"
+msgid "EZTFinder Type"
+msgstr "EZTFinder 형식"
 
 #: PiFinder/ui/menu_structure.py:838
 msgid "Left"
@@ -770,7 +766,7 @@ msgstr "우측"
 
 #: PiFinder/ui/menu_structure.py:846
 msgid "Straight"
-msgstr "직선"
+msgstr "똑바른"
 
 #: PiFinder/ui/menu_structure.py:850
 msgid "Flat v3"
@@ -820,7 +816,7 @@ msgstr "UBlox"
 
 #: PiFinder/ui/menu_structure.py:912
 msgid "GPSD (generic)"
-msgstr "GPSD (일반)"
+msgstr "GPSD (범용)"
 
 #: PiFinder/ui/menu_structure.py:920
 msgid "Tools"
@@ -871,9 +867,6 @@ msgstr "전원"
 msgid "Shutdown"
 msgstr "종료"
 
-msgid "Shutting Down"
-msgstr "종료중"
-
 #: PiFinder/ui/menu_structure.py:967
 msgid "Restart"
 msgstr "재시작"
@@ -885,7 +878,7 @@ msgstr "실험"
 #: PiFinder/ui/menu_structure.py:987
 
 msgid "Language"
-msgstr "Langage"
+msgstr "Language"
 
 #: PiFinder/ui/menu_structure.py:994
 
@@ -911,6 +904,9 @@ msgstr "Spanish"
 
 msgid "Korean"
 msgstr "한국어"
+
+msgid "Japanese"
+msgstr "Japanese"
 
 #: PiFinder/ui/object_details.py:61 PiFinder/ui/object_details.py:66
 
@@ -939,11 +935,11 @@ msgstr "크기:{size}"
 #: PiFinder/ui/object_details.py:207
 
 msgid "  Not Logged"
-msgstr "Connecté"
+msgstr "  저장되지 않음"
 
 #: PiFinder/ui/object_details.py:209
 msgid "  {logs} Logs"
-msgstr ""
+msgstr "  {logs} 로그"
 
 #: PiFinder/ui/object_details.py:244
 
@@ -1224,8 +1220,8 @@ msgstr "성군"
 msgid "planet"
 msgstr "행성"
 
-msgid "설명"
-msgstr ""
+msgid "about"
+msgstr "대하여"
 
 msgid "almost"
 msgstr "거의"
@@ -1233,8 +1229,8 @@ msgstr "거의"
 msgid "among"
 msgstr ""
 
-msgid "고리 성운"
-msgstr ""
+msgid "annular or ring nebula"
+msgstr "고리 성운"
 
 msgid "attached"
 msgstr ""
@@ -1433,10 +1429,10 @@ msgid "exactly round"
 msgstr ""
 
 msgid "rich in stars"
-msgstr "SAC Etoiles Rouges"
+msgstr ""
 
 msgid "south"
-msgstr "Etoile"
+msgstr "남"
 
 msgid "south following"
 msgstr ""
@@ -1484,7 +1480,7 @@ msgid "_very_"
 msgstr "매우"
 
 msgid "variable"
-msgstr "변화"
+msgstr "변광"
 
 msgid "remarkable"
 msgstr "뛰어난"
@@ -1499,10 +1495,10 @@ msgid "HELP"
 msgstr "도움말"
 
 msgid "Loaded"
-msgstr "설정됨"
+msgstr "불러옴"
 
 msgid "Deleted"
-msgstr "살제됨"
+msgstr "삭제됨"
 
 msgid "Renamed"
 msgstr "명칭변경됨"

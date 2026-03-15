@@ -1,18 +1,17 @@
-# German (Germany) translations for PiFinder.
 # Copyright (C) 2025 ORGANIZATION
-# This file is distributed under the same license as the PiFinder project.
-# Grimaldi, 2025.
+# This file is distributed under the same license as the PROJECT project.
+# Phil Lee <info@ezt-astro.com>, 2025.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-04 15:37+0200\n"
-"PO-Revision-Date: 2025-01-12 18:13+0100\n"
-"Last-Translator: Jens Scheidtmann\n"
-"Language: de_DE\n"
-"Language-Team: de_DE <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: 0.1\n"
+"Report-Msgid-Bugs-To: info@ezt-astro.com\n"
+"POT-Creation-Date: 2026-03-01 23:20+0900\n"
+"PO-Revision-Date: 2026-03-01 23:20+0900\n"
+"Last-Translator: Phil Lee <eztastro@gmail.com>\n"
+"Language: jp_JP\n"
+"Language-Team: jp_JP <phil@ezt-astro.com>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,215 +19,226 @@ msgstr ""
 
 #: PiFinder/cat_images.py:43
 msgid "No Image"
-msgstr "Kein Bild"
+msgstr "画像なし"
 
 #: PiFinder/obj_types.py:7 PiFinder/ui/menu_structure.py:362
 msgid "Galaxy"
-msgstr "Galaxie"
+msgstr "銀河"
 
 #. TRANSLATORS: Object type
 #: PiFinder/obj_types.py:8 PiFinder/ui/menu_structure.py:366
 msgid "Open Cluster"
-msgstr "Offene Haufen"
+msgstr "散開星団"
 
 #. TRANSLATORS: Object type
 #: PiFinder/obj_types.py:9 PiFinder/ui/menu_structure.py:374
 msgid "Globular"
-msgstr "Kugelhaufen"
+msgstr "球状星団"
 
 #. TRANSLATORS: Object type
 #: PiFinder/obj_types.py:10 PiFinder/ui/menu_structure.py:378
 msgid "Nebula"
-msgstr "Nebel"
+msgstr "星雲"
 
 #. TRANSLATORS: Object type
 #: PiFinder/obj_types.py:11 PiFinder/ui/menu_structure.py:386
-msgid "Dark Nebula"
-msgstr "Dunkelnebel"
 
 #. TRANSLATORS: Object type
 #: PiFinder/obj_types.py:12
+
 msgid "Planetary"
-msgstr "Plantarer N"
+msgstr "惑星"
 
 #. TRANSLATORS: Object type
 #: PiFinder/obj_types.py:13
+
 msgid "Cluster + Neb"
-msgstr "Off. Haufen/Nebel"
+msgstr "星団+星雲"
 
 #. TRANSLATORS: Object type
 #: PiFinder/obj_types.py:14 PiFinder/ui/menu_structure.py:406
 msgid "Asterism"
-msgstr "Asterismen"
+msgstr "アステリズム"
 
 #. TRANSLATORS: Object type
 #: PiFinder/obj_types.py:15 PiFinder/ui/menu_structure.py:402
 msgid "Knot"
-msgstr "Knoten"
+msgstr "彗星の尾"
 
 #. TRANSLATORS: Object type
 #: PiFinder/obj_types.py:16
+
 msgid "Triple star"
-msgstr "Dreif. Strn"
+msgstr "トリプルスター"
 
 #. TRANSLATORS: Object type
 #: PiFinder/obj_types.py:17
+
 msgid "Double star"
-msgstr "Dp. Stern"
+msgstr "ダブルスター"
 
 #. TRANSLATORS: Object type
 #: PiFinder/obj_types.py:18 PiFinder/ui/menu_structure.py:390
+
 msgid "Star"
-msgstr "Stern"
+msgstr "恒星"
 
 #. TRANSLATORS: Object type
 #: PiFinder/obj_types.py:19
 msgid "Unkn"
-msgstr "Unbkt"
+msgstr "不明"
 
 #. TRANSLATORS: Object type
 #: PiFinder/obj_types.py:20 PiFinder/ui/menu_structure.py:410
 msgid "Planet"
-msgstr "Planet"
+msgstr "惑星"
 
 #. TRANSLATORS: Object type
 #: PiFinder/obj_types.py:21 PiFinder/ui/menu_structure.py:414
+
 msgid "Comet"
-msgstr "Komet"
+msgstr "彗星"
 
 #: PiFinder/ui/align.py:56
 msgid "Align Timeout"
-msgstr "Justage Timeout"
+msgstr "タイムアウト"
 
 #: PiFinder/ui/align.py:74
 msgid "Alignment Set"
-msgstr "Justage fertig"
+msgstr "アライメント完了"
 
 #: PiFinder/ui/align.py:272 PiFinder/ui/chart.py:210
 msgid "Can't plot"
-msgstr "keine Anz."
+msgstr "表示不可"
 
 #: PiFinder/ui/align.py:284 PiFinder/ui/chart.py:222 PiFinder/ui/log.py:174
 #: PiFinder/ui/object_list.py:206 PiFinder/ui/object_list.py:226
 msgid "No Solve Yet"
-msgstr "kein Platesolve"
+msgstr "解析未完了"
 
 #: PiFinder/ui/align.py:397 PiFinder/ui/object_details.py:461
+
 msgid "Aligning..."
-msgstr "Justage..."
+msgstr "アライメント中..."
 
 #: PiFinder/ui/align.py:405 PiFinder/ui/object_details.py:469
+
 msgid "Aligned!"
-msgstr "Justiert!"
+msgstr "アライメント完了!"
 
 #: PiFinder/ui/align.py:407
 msgid "Alignment failed"
-msgstr "Justage abgebrochen"
+msgstr "アライメント失敗"
 
 #: PiFinder/ui/callbacks.py:50
 msgid "Filters Reset"
-msgstr "Filterreset"
+msgstr "設定リセット "
 
 #: PiFinder/ui/callbacks.py:63 PiFinder/ui/menu_structure.py:949
+
 msgid "Test Mode"
-msgstr "Test Modus"
+msgstr "テストモード"
 
 #: PiFinder/ui/callbacks.py:79
 msgid "Shutting Down"
-msgstr "Ausschalten"
+msgstr "終了中"
 
 #: PiFinder/ui/callbacks.py:88 PiFinder/ui/callbacks.py:96
 msgid "Restarting..."
-msgstr "Neustart..."
+msgstr "再起動中.."
 
 #: PiFinder/ui/callbacks.py:101 PiFinder/ui/callbacks.py:107
 #: PiFinder/ui/callbacks.py:113
 msgid "Switching cam"
-msgstr "andere Kamera"
+msgstr "カメラ切り替え"
 
 #: PiFinder/ui/callbacks.py:148
 msgid "WiFi to AP"
-msgstr "WLAN AP"
+msgstr "APモードで"
 
 #: PiFinder/ui/callbacks.py:154
 msgid "WiFi to Client"
-msgstr "WLAN Client"
+msgstr "クライアントモードで"
 
 #: PiFinder/ui/callbacks.py:193
 msgid "Time: {time}"
-msgstr "Zeit: {time}"
+msgstr "時間: {time}"
 
 #: PiFinder/ui/chart.py:40 PiFinder/ui/menu_structure.py:526
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "設定"
 
 #: PiFinder/ui/equipment.py:35
 msgid "No telescope selected"
-msgstr "Kein Teleskop gewählt"
+msgstr "望遠鏡が選択されていません"
 
 #: PiFinder/ui/equipment.py:50
 msgid "No eyepiece selected"
-msgstr "Kein Okular gewählt"
+msgstr "アイピース選択されていません"
 
 #: PiFinder/ui/equipment.py:70
 msgid "Mag: {mag:.0f}x"
-msgstr "M"
+msgstr "等級: {mag:.0f}x"
 
 #: PiFinder/ui/equipment.py:82
 msgid "TFOV: {tfov_degrees:.0f}°{tfov_minutes:02.0f}'"
-msgstr "WFld: {tfov_degrees:.0f}°{tfov_minutes:02.0f}'"
+msgstr "画角: {tfov_degrees:.0f}°{tfov_minutes:02.0f}'"
 
 #: PiFinder/ui/equipment.py:95
 msgid "Telescope..."
-msgstr "Teleskop..."
+msgstr "望遠鏡..."
 
 #: PiFinder/ui/equipment.py:106 PiFinder/ui/log.py:231
 msgid "Eyepiece..."
-msgstr "Okular..."
+msgstr "アイピース"
 
 #: PiFinder/ui/gpsstatus.py:31
 msgid "Limited"
-msgstr "eingeschränkt"
+msgstr "制限"
 
 #. TRANSLATORS: there's no GPS lock but we accept the position due to low
 #. enough error value
 #: PiFinder/ui/gpsstatus.py:34
 msgid "Basic"
-msgstr "Geht so"
+msgstr "基本"
 
 #. TRANSLATORS: coarse GPS fix, does this happen?
 #: PiFinder/ui/gpsstatus.py:35
 msgid "Accurate"
-msgstr "akkurat"
+msgstr "正確"
 
 #. TRANSLATORS: GPS 2D Fix
 #: PiFinder/ui/gpsstatus.py:36
+
 msgid "Precise"
-msgstr "präzise"
+msgstr "非常に正確"
 
 #: PiFinder/ui/gpsstatus.py:46
+
 msgid "Save"
-msgstr "Log speichern"
+msgstr "保存"
 
 #: PiFinder/ui/gpsstatus.py:49
 msgid "Lock"
-msgstr "Sperren"
+msgstr "接続"
 
 #: PiFinder/ui/gpsstatus.py:80
+
 msgid "Location Name"
-msgstr "Ort setzen"
+msgstr "地域名"
 
 #: PiFinder/ui/gpsstatus.py:83
 msgid "Loc {number}"
-msgstr "Ort {number}"
+msgstr "地域 {number}"
 
 #: PiFinder/ui/gpsstatus.py:113
+
 msgid "Location saved"
-msgstr "Ort setzen"
+msgstr "場所を保存"
 
 #: PiFinder/ui/gpsstatus.py:123
 msgid "Location locked"
-msgstr "Ort gesetzt"
+msgstr "位置固定"
 
 #: PiFinder/ui/gpsstatus.py:128
 msgid "{error:.1f} km"
@@ -240,205 +250,215 @@ msgstr "{error:.0f} m"
 
 #: PiFinder/ui/gpsstatus.py:155
 msgid "GPS Locked"
-msgstr "GPS fix!"
+msgstr "GPS接続"
 
 #: PiFinder/ui/gpsstatus.py:162
 msgid "Lock boost on"
-msgstr "GPS verstärkt"
+msgstr "パフォーマンスを向上中"
 
 #: PiFinder/ui/gpsstatus.py:171
 msgid "You are ready"
-msgstr "Bereit zur"
+msgstr "準備済み.."
 
 #: PiFinder/ui/gpsstatus.py:178
+
 msgid "to observe!"
-msgstr "Beobachtung!"
+msgstr "観測"
 
 #: PiFinder/ui/gpsstatus.py:186
 msgid "Stay on this screen"
-msgstr "Hiergeblieben für"
+msgstr "迅速なGPS受信のため"
 
 #: PiFinder/ui/gpsstatus.py:195
 msgid "for quicker lock"
-msgstr "schnellen GPS Fix"
+msgstr "現在の画面をオンにしてください"
+
 
 #: PiFinder/ui/gpsstatus.py:206
+
 msgid "Lock Type:"
-msgstr "Fix-Typ:"
+msgstr "接続タイプ"
 
 #: PiFinder/ui/gpsstatus.py:213 PiFinder/ui/menu_structure.py:426
 #: PiFinder/ui/menu_structure.py:458
 msgid "None"
-msgstr "Nix"
+msgstr "なし"
 
 #: PiFinder/ui/gpsstatus.py:226
 msgid "Sats seen/used:"
-msgstr "Sat gesehen/ben:"
+msgstr "衛星表示/使用済み:"
 
 #: PiFinder/ui/gpsstatus.py:242
 msgid "{square} Toggle Details"
-msgstr "{square} für Details"
+msgstr "{square} 詳細履歴"
 
 #: PiFinder/ui/gpsstatus.py:251
 msgid "Sats seen/used: {sats_seen}/{sats_used}"
-msgstr "Sats ges/ben: {sats_seen}/{sats_used}"
+msgstr "衛星表示/使用済み: {sats_seen}/{sats_used}"
 
 #: PiFinder/ui/gpsstatus.py:262
 msgid "Error: {error}"
-msgstr "Fehler: {error}"
+msgstr "エラー: {error}"
 
 #: PiFinder/ui/gpsstatus.py:273
 msgid "Lock:  {locktype}"
-msgstr "Fix:   {locktype}"
+msgstr "接続:  {locktype}"
 
 #: PiFinder/ui/gpsstatus.py:274
+
 msgid "No"
-msgstr "Nix"
+msgstr "なし"
 
 #: PiFinder/ui/gpsstatus.py:286
 msgid "Lat:   {latitude:.5f}"
-msgstr "Länge: {latitude:.5f}"
+msgstr "緯度:   {latitude:.5f}"
 
 #: PiFinder/ui/gpsstatus.py:294
 msgid "Lon:   {longitude:.5f}"
-msgstr "Breite: {longitude:.5f}"
+msgstr "硬度:   {longitude:.5f}"
 
 #: PiFinder/ui/gpsstatus.py:302
 msgid "Alt:   {altitude:.1f} m"
-msgstr "Höhe:  {altitude:.1f} m"
+msgstr "高さ:   {altitude:.1f} m"
 
 #: PiFinder/ui/gpsstatus.py:311
 msgid "Time:  {time}"
-msgstr "Zeit:  {time}"
+msgstr "時間:  {time}"
 
 #: PiFinder/ui/gpsstatus.py:320
 msgid "From:  {location_source}"
-msgstr "Quelle: {location_source}"
+msgstr "ソース:  {location_source}"
 
 #: PiFinder/ui/log.py:58
+
 msgid "Conditions"
-msgstr "Bedingungen"
+msgstr "条件"
 
 #: PiFinder/ui/log.py:63
 msgid "Transparency"
-msgstr "Transparenz"
+msgstr "透明度"
 
 #. TRANSLATORS: Transparency not available
 #. TRANSLATORS: Seeing not available
 #. TRANSLATORS: eyepiece info not available
 #: PiFinder/ui/log.py:70 PiFinder/ui/log.py:103 PiFinder/ui/log.py:261
 msgid "NA"
-msgstr "k.A."
+msgstr "なし"
 
 #: PiFinder/ui/log.py:74 PiFinder/ui/log.py:107
+
 msgid "Excellent"
-msgstr "Exzellent"
+msgstr "素晴らしい"
 
 #: PiFinder/ui/log.py:78 PiFinder/ui/log.py:111
 msgid "Very Good"
-msgstr "Sehr gut"
+msgstr "とても良い"
 
 #: PiFinder/ui/log.py:82 PiFinder/ui/log.py:115
 msgid "Good"
-msgstr "Gut"
+msgstr "良い"
 
 #: PiFinder/ui/log.py:86 PiFinder/ui/log.py:119
+
 msgid "Fair"
-msgstr "Okay"
+msgstr "普通"
 
 #: PiFinder/ui/log.py:90 PiFinder/ui/log.py:123
+
 msgid "Poor"
-msgstr "Schlecht"
+msgstr "貧しい"
 
 #: PiFinder/ui/log.py:96
+
 msgid "Seeing"
-msgstr "Seeing"
+msgstr "シーイング"
 
 #: PiFinder/ui/log.py:185
 msgid "SAVE Log"
-msgstr "Log speichern"
+msgstr "ログの保存"
 
 #: PiFinder/ui/log.py:196
 msgid "Observability"
-msgstr "Beobachtbarkeit"
+msgstr "観測タイミング"
 
 #: PiFinder/ui/log.py:209
 msgid "Appeal"
-msgstr "Eindruck"
+msgstr "おすすめ度"
 
 #: PiFinder/ui/log.py:221
 msgid "Conditions..."
-msgstr "Bedingungen..."
+msgstr "条件..."
 
 #: PiFinder/ui/log.py:304
+
 msgid "Logged!"
-msgstr "Geloggt!"
+msgstr "記録済み"
 
 #: PiFinder/ui/menu_manager.py:77
+
 msgid "Eyepiece"
-msgstr "Okular"
+msgstr "接眼レンズ"
 
 #: PiFinder/ui/menu_manager.py:96
+
 msgid "Telescope"
-msgstr "Teleskop"
+msgstr "望遠鏡"
 
 #: PiFinder/ui/menu_structure.py:23
+
 msgid "Language: de"
-msgstr "Sprache: Deutsch"
+msgstr "言語: ドイツ語"
 
 #: PiFinder/ui/menu_structure.py:24
+
 msgid "Language: en"
-msgstr "Sprache: Englisch"
+msgstr "言語: 英語"
 
 #: PiFinder/ui/menu_structure.py:25
+
 msgid "Language: es"
-msgstr "Sprache: Spanisch"
+msgstr "言語: スペイン語"
 
 #: PiFinder/ui/menu_structure.py:26
+
 msgid "Language: fr"
-msgstr "Sprache: Französisch"
-
-msgid "Korean"
-msgstr "Korean"
-
-msgid "Japanese"
-msgstr "Japanese"
+msgstr "言語: フランス語"
 
 #: PiFinder/ui/menu_structure.py:37
 msgid "Start"
-msgstr "Start"
+msgstr "スタート"
 
 #: PiFinder/ui/menu_structure.py:42
 msgid "Focus"
-msgstr "Fokus"
+msgstr "焦点調節"
 
 #: PiFinder/ui/menu_structure.py:46
 msgid "Align"
-msgstr "Justieren"
+msgstr "整列"
 
 #: PiFinder/ui/menu_structure.py:52 PiFinder/ui/menu_structure.py:932
 msgid "GPS Status"
-msgstr "GPS Status"
+msgstr "GPS状態"
 
 #: PiFinder/ui/menu_structure.py:58
 msgid "Chart"
-msgstr "Karte"
+msgstr "チャート"
 
 #: PiFinder/ui/menu_structure.py:64
 msgid "Objects"
-msgstr "Objekte"
+msgstr "オブジェクト"
 
 #: PiFinder/ui/menu_structure.py:69
 msgid "All Filtered"
-msgstr "Gefilt. Obj"
+msgstr "すべて選択"
 
 #: PiFinder/ui/menu_structure.py:74
 msgid "By Catalog"
-msgstr "nach Katalog"
+msgstr "カタログ"
 
 #: PiFinder/ui/menu_structure.py:79 PiFinder/ui/menu_structure.py:254
 msgid "Planets"
-msgstr "Planeten"
+msgstr "惑星"
 
 #: PiFinder/ui/menu_structure.py:85 PiFinder/ui/menu_structure.py:156
 #: PiFinder/ui/menu_structure.py:258 PiFinder/ui/menu_structure.py:308
@@ -448,7 +468,7 @@ msgstr "NGC"
 #: PiFinder/ui/menu_structure.py:91 PiFinder/ui/menu_structure.py:150
 #: PiFinder/ui/menu_structure.py:262 PiFinder/ui/menu_structure.py:304
 msgid "Messier"
-msgstr "Messier"
+msgstr "メシエ"
 
 #: PiFinder/ui/menu_structure.py:97 PiFinder/ui/menu_structure.py:266
 msgid "DSO..."
@@ -456,11 +476,11 @@ msgstr "DSO..."
 
 #: PiFinder/ui/menu_structure.py:102 PiFinder/ui/menu_structure.py:272
 msgid "Abell Pn"
-msgstr "Abell PN"
+msgstr "Abell Pn"
 
 #: PiFinder/ui/menu_structure.py:108 PiFinder/ui/menu_structure.py:276
 msgid "Arp Galaxies"
-msgstr "Arp Galaxien"
+msgstr "Arp Galaxies"
 
 #: PiFinder/ui/menu_structure.py:114 PiFinder/ui/menu_structure.py:280
 msgid "Barnard"
@@ -472,7 +492,7 @@ msgstr "Caldwell"
 
 #: PiFinder/ui/menu_structure.py:126 PiFinder/ui/menu_structure.py:288
 msgid "Collinder"
-msgstr "Collinger"
+msgstr "Collinder"
 
 #: PiFinder/ui/menu_structure.py:132 PiFinder/ui/menu_structure.py:292
 msgid "E.G. Globs"
@@ -496,112 +516,116 @@ msgstr "TAAS 200"
 
 #: PiFinder/ui/menu_structure.py:176 PiFinder/ui/menu_structure.py:322
 msgid "Stars..."
-msgstr "Sterne..."
+msgstr "恒星..."
 
 #: PiFinder/ui/menu_structure.py:181 PiFinder/ui/menu_structure.py:328
 msgid "Bright Named"
-msgstr "Bright-Star"
+msgstr "名前"
 
 #: PiFinder/ui/menu_structure.py:187 PiFinder/ui/menu_structure.py:332
 msgid "SAC Doubles"
-msgstr "SAC Doppel"
+msgstr "SAC二重星"
 
 #: PiFinder/ui/menu_structure.py:193 PiFinder/ui/menu_structure.py:336
 msgid "SAC Asterisms"
-msgstr "SAC Asterismen"
+msgstr "SACアステリズム"
 
 #: PiFinder/ui/menu_structure.py:199 PiFinder/ui/menu_structure.py:340
 msgid "SAC Red Stars"
-msgstr "SAC Rote Riesen"
+msgstr "SACレッドスター"
 
 #: PiFinder/ui/menu_structure.py:205 PiFinder/ui/menu_structure.py:344
 msgid "RASC Doubles"
-msgstr "RASC Doppel"
+msgstr "RASC二重星"
 
 #: PiFinder/ui/menu_structure.py:211 PiFinder/ui/menu_structure.py:348
 msgid "TLK 90 Variables"
-msgstr "TLK 90 Variable"
+msgstr "TLK 90 変光星"
 
 #: PiFinder/ui/menu_structure.py:221
 msgid "Recent"
-msgstr "Letzte..."
+msgstr "最近の"
+
+msgid "Custom"
+msgstr "カスタム"
 
 #: PiFinder/ui/menu_structure.py:227
 msgid "Name Search"
-msgstr "Namenssuche"
+msgstr "名前検索"
 
 #: PiFinder/ui/menu_structure.py:233 PiFinder/ui/object_list.py:136
 msgid "Filter"
-msgstr "Filter"
+msgstr "検索"
 
 #: PiFinder/ui/menu_structure.py:239
 msgid "Reset All"
-msgstr "Zurücksetzen"
+msgstr "リセット"
 
 #: PiFinder/ui/menu_structure.py:243 PiFinder/ui/menu_structure.py:973
 msgid "Confirm"
-msgstr "Bestätigen"
+msgstr "確認する"
 
 #: PiFinder/ui/menu_structure.py:244 PiFinder/ui/menu_structure.py:976
 #: PiFinder/ui/software.py:204
 msgid "Cancel"
-msgstr "Abbrechen"
+msgstr "キャンセル"
 
 #: PiFinder/ui/menu_structure.py:248
 msgid "Catalogs"
-msgstr "Kataloge"
+msgstr "カタログ"
 
 #: PiFinder/ui/menu_structure.py:356
 msgid "Type"
-msgstr "Typ"
+msgstr "タイプ"
 
 #: PiFinder/ui/menu_structure.py:370
 msgid "Cluster/Neb"
-msgstr "Off. Haufen/Nebel"
+msgstr "星団/星雲"
 
 #: PiFinder/ui/menu_structure.py:382
 msgid "P. Nebula"
-msgstr "Plan. Nebel"
+msgstr "惑星上星雲"
 
 #: PiFinder/ui/menu_structure.py:394
 msgid "Double Str"
-msgstr "Dp. Stern"
+msgstr "ダブルスター"
 
 #: PiFinder/ui/menu_structure.py:398
+
 msgid "Triple Str"
-msgstr "Dreif. Strn"
+msgstr "トリプルスター"
 
 #: PiFinder/ui/menu_structure.py:420
 msgid "Altitude"
-msgstr "Höhe"
+msgstr "高度"
 
 #: PiFinder/ui/menu_structure.py:452
 msgid "Magnitude"
-msgstr "Magnitude"
+msgstr "等級"
 
 #: PiFinder/ui/menu_structure.py:504 PiFinder/ui/menu_structure.py:514
 msgid "Observed"
-msgstr "beobachtet"
+msgstr "観測した対象"
 
 #: PiFinder/ui/menu_structure.py:510
 msgid "Any"
-msgstr "Alle"
+msgstr "任意"
 
 #: PiFinder/ui/menu_structure.py:518
 msgid "Not Observed"
-msgstr "nicht beobachtet"
+msgstr "観測されていない対象"
 
 #: PiFinder/ui/menu_structure.py:531
 msgid "User Pref..."
-msgstr "Nutzer..."
+msgstr "個人設定..."
 
 #: PiFinder/ui/menu_structure.py:536
 msgid "Key Bright"
-msgstr "Tasten Helligkeit"
+msgstr "キーブライト"
 
 #: PiFinder/ui/menu_structure.py:576
 msgid "Sleep Time"
-msgstr "Ruhezustand"
+msgstr "睡眠時間"
 
 #: PiFinder/ui/menu_structure.py:582 PiFinder/ui/menu_structure.py:614
 #: PiFinder/ui/menu_structure.py:638 PiFinder/ui/menu_structure.py:687
@@ -609,71 +633,71 @@ msgstr "Ruhezustand"
 #: PiFinder/ui/menu_structure.py:759 PiFinder/ui/preview.py:62
 #: PiFinder/ui/preview.py:79
 msgid "Off"
-msgstr "Aus"
+msgstr "オフ"
 
 #: PiFinder/ui/menu_structure.py:608
 msgid "Menu Anim"
-msgstr "Menu Animation"
+msgstr "メニュー切替速度"
 
 #: PiFinder/ui/menu_structure.py:618 PiFinder/ui/menu_structure.py:642
 msgid "Fast"
-msgstr "Schnell"
+msgstr "速い"
 
 #: PiFinder/ui/menu_structure.py:622 PiFinder/ui/menu_structure.py:646
 #: PiFinder/ui/menu_structure.py:695 PiFinder/ui/menu_structure.py:719
 #: PiFinder/ui/menu_structure.py:743 PiFinder/ui/preview.py:67
 msgid "Medium"
-msgstr "Mittel"
+msgstr "中くらい"
 
 #: PiFinder/ui/menu_structure.py:626 PiFinder/ui/menu_structure.py:650
 msgid "Slow"
-msgstr "Langsam"
+msgstr "遅い"
 
 #: PiFinder/ui/menu_structure.py:632
 msgid "Scroll Speed"
-msgstr "Scrollgeschwindigkeit"
+msgstr "スクロール速度"
 
 #: PiFinder/ui/menu_structure.py:656
 msgid "Az Arrows"
-msgstr "Az Pfeile"
+msgstr "方位角矢印"
 
 #: PiFinder/ui/menu_structure.py:663
 msgid "Default"
-msgstr "Standard"
+msgstr "デフォルト"
 
 #: PiFinder/ui/menu_structure.py:667
 msgid "Reverse"
-msgstr "Umgekehrt"
+msgstr "リバース"
 
 #: PiFinder/ui/menu_structure.py:675
 msgid "Chart..."
-msgstr "Karte..."
+msgstr "チャート..."
 
 #: PiFinder/ui/menu_structure.py:681
 msgid "Reticle"
-msgstr "Fadenkreuz"
+msgstr "照準マーク"
 
 #: PiFinder/ui/menu_structure.py:691 PiFinder/ui/menu_structure.py:715
 #: PiFinder/ui/menu_structure.py:739 PiFinder/ui/preview.py:72
 msgid "Low"
-msgstr "Niedrig"
+msgstr "低い"
 
 #: PiFinder/ui/menu_structure.py:699 PiFinder/ui/menu_structure.py:723
 #: PiFinder/ui/menu_structure.py:747 PiFinder/ui/preview.py:64
 msgid "High"
-msgstr "Hoch"
+msgstr "高い"
 
 #: PiFinder/ui/menu_structure.py:705
 msgid "Constellation"
-msgstr "Sternbilder"
+msgstr "星座"
 
 #: PiFinder/ui/menu_structure.py:729
 msgid "DSO Display"
-msgstr "DSO Anzeige"
+msgstr "DSO表示"
 
 #: PiFinder/ui/menu_structure.py:753
 msgid "RA/DEC Disp."
-msgstr "RA/DEC Anzeige"
+msgstr "AD/DEC表示"
 
 #: PiFinder/ui/menu_structure.py:763
 msgid "HH:MM"
@@ -681,27 +705,27 @@ msgstr "HH:MM"
 
 #: PiFinder/ui/menu_structure.py:767
 msgid "Degrees"
-msgstr "Grad"
+msgstr "角度"
 
 #: PiFinder/ui/menu_structure.py:775
 msgid "Camera Exp"
-msgstr "Belichtungsz."
+msgstr "カメラ露出"
 
 #: PiFinder/ui/menu_structure.py:783
 msgid "0.025s"
-msgstr "0,025s"
+msgstr "0.025s"
 
 #: PiFinder/ui/menu_structure.py:787
 msgid "0.05s"
-msgstr "0,05s"
+msgstr "0.05s"
 
 #: PiFinder/ui/menu_structure.py:791
 msgid "0.1s"
-msgstr "0,1s"
+msgstr "0.1s"
 
 #: PiFinder/ui/menu_structure.py:795
 msgid "0.2s"
-msgstr "0,2s"
+msgstr "0.2s"
 
 #: PiFinder/ui/menu_structure.py:799
 msgid "0.4s"
@@ -717,55 +741,57 @@ msgstr "1s"
 
 #: PiFinder/ui/menu_structure.py:813
 msgid "WiFi Mode"
-msgstr "WLAN"
+msgstr "Wi-Fiモード"
 
 #: PiFinder/ui/menu_structure.py:819
+
 msgid "Client Mode"
-msgstr "client mode sein"
+msgstr "クライアントモード"
 
 #: PiFinder/ui/menu_structure.py:824
+
 msgid "AP Mode"
-msgstr "Access Point"
+msgstr "APモード"
 
 #: PiFinder/ui/menu_structure.py:831
 msgid "EZTFinder Type"
-msgstr "EZTFinder Art"
+msgstr "EZTFinder タイプ"
 
 #: PiFinder/ui/menu_structure.py:838
 msgid "Left"
-msgstr "Links"
+msgstr "左"
 
 #: PiFinder/ui/menu_structure.py:842
 msgid "Right"
-msgstr "Rechts"
+msgstr "右"
 
 #: PiFinder/ui/menu_structure.py:846
 msgid "Straight"
-msgstr "Gerade"
+msgstr "ストレート"
 
 #: PiFinder/ui/menu_structure.py:850
 msgid "Flat v3"
-msgstr "Flach v3"
+msgstr "Flat v3"
 
 #: PiFinder/ui/menu_structure.py:854
 msgid "Flat v2"
-msgstr "Flach v2"
+msgstr "Flat v2"
 
 #: PiFinder/ui/menu_structure.py:860
 msgid "Mount Type"
-msgstr "Montierungsart"
+msgstr "マウントタイプ"
 
 #: PiFinder/ui/menu_structure.py:867
 msgid "Alt/Az"
-msgstr "Azimutal"
+msgstr "経緯台式"
 
 #: PiFinder/ui/menu_structure.py:871
 msgid "Equitorial"
-msgstr "Parallaktisch"
+msgstr "赤道儀式"
 
 #: PiFinder/ui/menu_structure.py:877
 msgid "Camera Type"
-msgstr "Typ Kamera"
+msgstr "カメラの種類"
 
 #: PiFinder/ui/menu_structure.py:883
 msgid "v2 - imx477"
@@ -776,327 +802,765 @@ msgid "v3 - imx296"
 msgstr "v3 - imx296"
 
 #: PiFinder/ui/menu_structure.py:893
+
 msgid "v3 - imx462"
 msgstr "v3 - imx462"
 
 #: PiFinder/ui/menu_structure.py:900
+
 msgid "GPS Type"
-msgstr "GPS Typ"
+msgstr "GPSの種類"
 
 #: PiFinder/ui/menu_structure.py:908
 msgid "UBlox"
-msgstr "Ublox"
+msgstr "UBlox"
 
 #: PiFinder/ui/menu_structure.py:912
 msgid "GPSD (generic)"
-msgstr "GPSD (generisch)"
+msgstr "GPSD (汎用の)"
 
 #: PiFinder/ui/menu_structure.py:920
 msgid "Tools"
-msgstr "Werkzeuge"
+msgstr "ツール"
 
 #: PiFinder/ui/menu_structure.py:924
+
 msgid "Status"
-msgstr "Status"
+msgstr "状態"
 
 #: PiFinder/ui/menu_structure.py:925
 msgid "Equipment"
-msgstr "Ausrüstung"
+msgstr "設備"
 
 #: PiFinder/ui/menu_structure.py:927
+
 msgid "Place & Time"
-msgstr "Ort & Zeit"
+msgstr "場所＆時間"
 
 #: PiFinder/ui/menu_structure.py:936
+
 msgid "Set Location"
-msgstr "Ort setzen"
+msgstr "位置設定"
 
 #: PiFinder/ui/menu_structure.py:940
+
 msgid "Set Time"
-msgstr "Zeit setzen"
+msgstr "時間設定"
 
 #: PiFinder/ui/menu_structure.py:944
+
 msgid "Reset"
-msgstr "Reset"
+msgstr "リセット"
 
 #: PiFinder/ui/menu_structure.py:947
 msgid "Console"
-msgstr "Konsole"
+msgstr "コンソール"
 
 #: PiFinder/ui/menu_structure.py:948
 msgid "Software Upd"
-msgstr "Update Softw"
+msgstr "SWアップデート"
 
 #: PiFinder/ui/menu_structure.py:951
 msgid "Power"
-msgstr "Ein/Aus"
+msgstr "パワー"
 
 #: PiFinder/ui/menu_structure.py:957
 msgid "Shutdown"
-msgstr "Ausschalten"
+msgstr "終了"
 
 #: PiFinder/ui/menu_structure.py:967
 msgid "Restart"
-msgstr "Neu starten"
+msgstr "再起動"
 
 #: PiFinder/ui/menu_structure.py:982
 msgid "Experimental"
-msgstr "Experimentell"
+msgstr "実験"
 
 #: PiFinder/ui/menu_structure.py:987
+
 msgid "Language"
-msgstr "Sprache"
+msgstr "Language"
 
 #: PiFinder/ui/menu_structure.py:994
+
 msgid "English"
-msgstr "Englisch"
+msgstr "English"
 
 #: PiFinder/ui/menu_structure.py:998
+
 msgid "German"
-msgstr "Deutsch"
+msgstr "German"
 
 #: PiFinder/ui/menu_structure.py:1002
+
 msgid "French"
-msgstr "Französisch"
+msgstr "French"
 
 #: PiFinder/ui/menu_structure.py:1006
+
 msgid "Spanish"
-msgstr "Spanisch"
+msgstr "Spanish"
+
+#: PiFinder/ui/menu_structure.py:1006
+
+msgid "Korean"
+msgstr "Korean"
+
+msgid "Japanese"
+msgstr "Japanese"
 
 #: PiFinder/ui/object_details.py:61 PiFinder/ui/object_details.py:66
+
 msgid "ALIGN"
-msgstr "JUSTAGE"
+msgstr "整列"
 
 #: PiFinder/ui/object_details.py:64
+
 msgid "CANCEL"
-msgstr "ABBR"
+msgstr "キャンセル"
 
 #: PiFinder/ui/object_details.py:96
+
 msgid "No Object Found"
-msgstr "Keine Objekte"
+msgstr "結果なし"
 
 #: PiFinder/ui/object_details.py:175 PiFinder/ui/object_details.py:183
 msgid "Mag:{obj_mag}"
-msgstr "Gr:{obj_mag}"
+msgstr "等級:{obj_mag}"
 
 #. TRANSLATORS: object info magnitude
 #: PiFinder/ui/object_details.py:178
 msgid "Sz:{size}"
-msgstr "D:{size}"
+msgstr "サイズ:{size}"
 
 #: PiFinder/ui/object_details.py:207
+
 msgid "  Not Logged"
-msgstr "  Nicht geloggt"
+msgstr "  保存されない"
 
 #: PiFinder/ui/object_details.py:209
 msgid "  {logs} Logs"
-msgstr "  {logs} Logs"
+msgstr "  {logs}　Logs"
 
 #: PiFinder/ui/object_details.py:244
+
 msgid "No solve"
-msgstr "Bisher keine"
+msgstr "解決しない"
 
 #: PiFinder/ui/object_details.py:250
 msgid "yet{elipsis}"
-msgstr "Lösung{elipsis}"
+msgstr ""
 
 #: PiFinder/ui/object_details.py:264
+
 msgid "Searching"
-msgstr "Suche"
+msgstr "検索中"
 
 #: PiFinder/ui/object_details.py:270
 msgid "for GPS{elipsis}"
-msgstr "nach Satelliten{elipsis}"
+msgstr ""
 
 #: PiFinder/ui/object_details.py:284
 msgid "Calculating"
-msgstr "berechne..."
+msgstr "計算中"
 
 #: PiFinder/ui/object_details.py:471
 msgid "Too Far"
-msgstr "zu weit"
+msgstr "遠すぎる"
 
 #: PiFinder/ui/object_details.py:496
+
 msgid "LOG"
-msgstr "Loggen"
+msgstr "ログ"
 
 #: PiFinder/ui/object_list.py:123
+
 msgid "Sort"
-msgstr "Sortieren"
+msgstr "ソート"
 
 #: PiFinder/ui/object_list.py:127 PiFinder/ui/object_list.py:667
+
 msgid "Nearest"
-msgstr "Nächste"
+msgstr "最寄りの"
 
 #: PiFinder/ui/object_list.py:131 PiFinder/ui/object_list.py:673
+
 msgid "Standard"
-msgstr "Standard"
+msgstr "標準"
 
 #: PiFinder/ui/object_list.py:193
 msgid ""
 "Sorting by\n"
 "{sort_order}"
 msgstr ""
-"Sortieren nach\n"
-"{sort_order}"
+"{sort_order}\n"
+"並べ替える"
 
 #: PiFinder/ui/object_list.py:194 PiFinder/ui/object_list.py:678
 msgid "RA"
-msgstr "RA"
+msgstr "赤経"
+
+msgid "DEC"
+msgstr "赤緯"
 
 #: PiFinder/ui/object_list.py:196 PiFinder/ui/object_list.py:445
+
 msgid "Catalog"
-msgstr "Katalog"
+msgstr "カタログ"
 
 #: PiFinder/ui/object_list.py:198 PiFinder/ui/object_list.py:447
 msgid "Nearby"
-msgstr "Nächster"
+msgstr "近く"
 
 #: PiFinder/ui/object_list.py:409
+
 msgid "No objects"
-msgstr "Keine Objekte"
+msgstr "対象なし"
 
 #: PiFinder/ui/object_list.py:415
+
 msgid "match filter"
-msgstr "gefiltert"
+msgstr "検索条件"
 
 #: PiFinder/ui/object_list.py:431
 msgid "{catalog_info_1} obj"
-msgstr "{catalog_info_1} Obj"
+msgstr "{catalog_info_1} 対象"
 
 #. TRANSLATORS: number of objects in object list
 #: PiFinder/ui/object_list.py:434
 msgid ", {catalog_info_2}d old"
-msgstr ", {catalog_info_2}d alt"
+msgstr ""
 
 #: PiFinder/ui/object_list.py:444
 msgid "Sort: {sort_order}"
-msgstr "Sort.: {sort_order}"
+msgstr "並べ替え: {sort_order}"
 
 #: PiFinder/ui/preview.py:56
 msgid "Exposure"
-msgstr "BLZ"
+msgstr "露出"
 
 #: PiFinder/ui/preview.py:60
 msgid "Gamma"
-msgstr "Gamma"
+msgstr "ガンマ"
 
 #: PiFinder/ui/preview.py:77
 msgid "BG Sub"
-msgstr "Hgrabz"
+msgstr "背景減算"
 
 #: PiFinder/ui/preview.py:81
 msgid "Full"
-msgstr "Voll"
+msgstr "フル"
 
 #: PiFinder/ui/preview.py:85
 msgid "Half"
-msgstr "Halb"
+msgstr "半分"
 
 #: PiFinder/ui/preview.py:228
 msgid "Zoom x{zoom_number}"
-msgstr "Zoom x{zoom_number}"
+msgstr "ズーム x{zoom_number}"
 
 #: PiFinder/ui/software.py:88
+
 msgid "Updating..."
-msgstr "Update läuft..."
+msgstr "更新中..."
 
 #: PiFinder/ui/software.py:90
-msgid "Ok! Restarting"
-msgstr "Ok! Neustart..."
+
+#msgid "Ok! Restarting"
+#msgstr "再起動中..."
 
 #: PiFinder/ui/software.py:93
 msgid "Error on Upd"
-msgstr "Fehler beim Upd"
+msgstr "更新中にエラーが発生しました"
 
 #: PiFinder/ui/software.py:101
 msgid "Wifi Mode: {wifi_mode}"
-msgstr "WLAN Mode: {wifi_mode}"
+msgstr "Wi-Fi: {wifi_mode}"
 
 #: PiFinder/ui/software.py:109
 msgid "Current Version"
-msgstr "aktuelle Version"
+msgstr "現在のバージョン"
 
 #: PiFinder/ui/software.py:125
 msgid "Release Version"
-msgstr "Release Version"
+msgstr "リリースバージョン"
 
 #: PiFinder/ui/software.py:141
+
 msgid "WiFi must be"
-msgstr "WLAN muss im"
+msgstr "WiFi は必須です"
 
 #: PiFinder/ui/software.py:147
+
 msgid "client mode"
-msgstr "client mode sein"
+msgstr "クライアントモード"
 
 #: PiFinder/ui/software.py:160
 msgid "Checking for"
-msgstr "Überprüfen nach"
+msgstr "を確認しています"
 
 #: PiFinder/ui/software.py:166
 msgid "updates{elipsis}"
-msgstr "Updates{elipsis}"
+msgstr "更新{elipsis}"
 
 #: PiFinder/ui/software.py:182
 msgid "No Update"
-msgstr "Kein Update"
+msgstr "更新なし"
 
 #: PiFinder/ui/software.py:188
 msgid "needed"
-msgstr "notwendig"
+msgstr "必要な"
 
 #: PiFinder/ui/software.py:198
 msgid "Update Now"
-msgstr "Jetzt Updaten"
+msgstr "今すぐ更新"
 
 #: PiFinder/ui/text_menu.py:60
+
 msgid "Select None"
-msgstr "Alle abwähl."
+msgstr "選択なし"
 
 #: PiFinder/ui/text_menu.py:221
+
 msgid "Select All"
-msgstr "Alle anwähl."
+msgstr "全選択"
 
 #: PiFinder/ui/textentry.py:186
+
 msgid "Results"
-msgstr "Ergebnisse"
+msgstr "結果"
 
 #: PiFinder/ui/textentry.py:292
+
 msgid "Enter Location Name:"
-msgstr "Ort eingeben:"
+msgstr "観測地の名称入力:"
 
 #: PiFinder/ui/textentry.py:300
+
 msgid "Search:"
-msgstr "Namenssuche:"
+msgstr "検索:"
 
 #: PiFinder/ui/timeentry.py:15
+
 msgid "hh"
-msgstr "hh"
+msgstr ""
 
 #: PiFinder/ui/timeentry.py:16
 msgid "mm"
-msgstr "mm"
+msgstr ""
 
 #: PiFinder/ui/timeentry.py:17
 msgid "ss"
-msgstr "ss"
+msgstr ""
 
 #: PiFinder/ui/timeentry.py:97
+
 msgid "Enter Local Time"
-msgstr "lok Zeit eingeben"
+msgstr "時間入力"
 
 #: PiFinder/ui/timeentry.py:117
-msgid "  Next box"
-msgstr "  nächste"
+msgid " Next box"
+msgstr " 次へ"
 
 #: PiFinder/ui/timeentry.py:124
 msgid "  Done"
-msgstr "  Fertig"
+msgstr "  完了"
 
 #: PiFinder/ui/timeentry.py:131
 msgid "󰍴  Delete/Previous"
-msgstr "󰍴  Löschen/Zurück"
+msgstr "󰍴  削除/前へ"
 
-#~ msgid "HELP"
-#~ msgstr "HILFE"
+msgid "Language: Spanish"
+msgstr "言語: スペイン語"
+
+msgid "Debug: Activated"
+msgstr "デバッグ : 活性化"
+
+msgid "Camera"
+msgstr "カメラ"
+
+msgid "Comets"
+msgstr "彗星"
+
+msgid "yet{ellipsis}"
+msgstr ""
+
+msgid "for GPS{ellipsis}"
+msgstr ""
+
+msgid "Time: {0}"
+msgstr "時間: {0}"
+
+msgid "Mag:{obj_magn}"
+msgstr "評価:{obj_magn}"
+
+msgid "Sz:{sz}"
+msgstr "サイズ:{sz}"
+
+msgid "galaxy"
+msgstr "銀河"
+
+msgid "oc"
+msgstr ""
+
+msgid "gc"
+msgstr "NGC"
+
+msgid "neb"
+msgstr "星雲"
+
+msgid "pneb"
+msgstr "惑星状星雲"
+
+msgid "dstar"
+msgstr "ダブルスター"
+
+msgid "ast"
+msgstr "アステリズム"
+
+msgid "planet"
+msgstr "惑星"
+
+msgid "about"
+msgstr "について"
+
+msgid "almost"
+msgstr "ほとんど"
+
+msgid "among"
+msgstr ""
+
+msgid "annular or ring nebula"
+msgstr "リング星雲"
+
+msgid "attached"
+msgstr ""
+
+msgid "brighter"
+msgstr "より明るい"
+
+msgid "between"
+msgstr "間"
+
+msgid "binuclear"
+msgstr "双眼鏡"
+
+msgid "brightest to n side"
+msgstr ""
+
+msgid "brightest to s side"
+msgstr ""
+
+msgid "brightest to p side"
+msgstr ""
+
+msgid "brightest to f side"
+msgstr ""
+
+msgid "bright"
+msgstr ""
+
+msgid "considerably"
+msgstr ""
+
+msgid "chevelure"
+msgstr "A l'envers"
+
+msgid "coarse, coarsely"
+msgstr ""
+
+msgid "cometic (cometary form)"
+msgstr ""
+
+msgid "companion"
+msgstr ""
+
+msgid "connected"
+msgstr ""
+
+msgid "in contact"
+msgstr ""
+
+msgid "compressed"
+msgstr ""
+
+msgid "cluster"
+msgstr "星団"
+
+msgid "diameter"
+msgstr ""
+
+msgid "defined"
+msgstr ""
+
+msgid "diffused"
+msgstr ""
+
+msgid "difficult"
+msgstr ""
+
+msgid "distance, or distant"
+msgstr ""
+
+msgid "double"
+msgstr "ダブルスター"
+
+msgid "extremely, excessively"
+msgstr ""
+
+msgid "most extremely"
+msgstr ""
+
+msgid "easily resolvable"
+msgstr ""
+
+msgid "excentric"
+msgstr ""
+
+msgid "extended"
+msgstr ""
+
+msgid "following (eastward)"
+msgstr ""
+
+msgid "faint"
+msgstr ""
+
+msgid "gradually"
+msgstr ""
+
+msgid "globular"
+msgstr "球状"
+
+msgid "group"
+msgstr ""
+
+msgid "irregular"
+msgstr ""
+
+msgid "irregular figure"
+msgstr ""
+
+msgid "involved, involving"
+msgstr ""
+
+msgid "little (adv.); long (adj.)"
+msgstr ""
+
+msgid "large"
+msgstr "大"
+
+msgid "magnitude"
+msgstr "評価"
+
+msgid "middle, or in the middle"
+msgstr ""
+
+msgid "north"
+msgstr "北"
+
+msgid "Dark Nebula"
+msgstr "暗黒星雲"
+
+
+msgid "nebula"
+msgstr "星雲"
+
+msgid "nebulous"
+msgstr "漠然とした"
+
+msgid "nebulosity"
+msgstr "星雲機"
+
+msgid "north following"
+msgstr ""
+
+msgid "north preceding"
+msgstr ""
+
+msgid "north-south"
+msgstr ""
+
+msgid "near"
+msgstr "Récent"
+
+msgid "nucleus, or to a nucleus"
+msgstr ""
+
+msgid "preceding-following"
+msgstr ""
+
+msgid "pretty (adv., before F. B. L, S)"
+msgstr ""
+
+msgid "pretty gradually"
+msgstr ""
+
+msgid "pretty much"
+msgstr ""
+
+msgid "pretty suddenly"
+msgstr ""
+
+msgid "planetary nebula (same as PN)"
+msgstr ""
+
+msgid "probably"
+msgstr ""
+
+msgid "poor (sparse) in stars"
+msgstr ""
+
+msgid "planetary nebula"
+msgstr "惑星状星雲"
+
+msgid "resolvable (mottled, not resolved)"
+msgstr ""
+
+msgid "partially resolved, some stars seen"
+msgstr ""
+
+msgid "well resolved, clearly consisting of stars"
+msgstr ""
+
+msgid "round"
+msgstr ""
+
+msgid "exactly round"
+msgstr ""
+
+msgid "rich in stars"
+msgstr ""
+
+msgid "south"
+msgstr "南"
+
+msgid "south following"
+msgstr ""
+
+msgid "south preceding"
+msgstr ""
+
+msgid "scattered"
+msgstr ""
+
+msgid "several"
+msgstr ""
+
+msgid "stars (pl.)"
+msgstr "恒星"
+
+msgid "stars of 9th magnitude and fainter"
+msgstr "クラス9とより暗い恒星"
+
+msgid "stars of mag. 9 to 13"
+msgstr "9～13等級恒星"
+
+msgid "stellar, pointlike"
+msgstr ""
+
+msgid "suspected"
+msgstr "疑わしい"
+
+msgid "small in angular size"
+msgstr "小さな脚の大きさ"
+
+msgid "trapezium"
+msgstr "トラペジウム"
+
+msgid "triangle, forms a triangle with"
+msgstr "三角形"
+
+msgid "trinuclear"
+msgstr "三核"
+
+msgid "very"
+msgstr "とても"
+
+msgid "_very_"
+msgstr "_とても_"
+
+msgid "variable"
+msgstr "変数"
+
+msgid "remarkable"
+msgstr "著しい"
+
+msgid "very much so"
+msgstr "とてもそうです"
+
+msgid "a magnificent or otherwise interesting object"
+msgstr "興味深いターゲット"
+
+msgid "HELP"
+msgstr "ヘルプ"
+
+msgid "Loaded"
+msgstr "読み込み"
+
+msgid "Deleted"
+msgstr "デリート"
+
+msgid "Renamed"
+msgstr "名前変更"
+
+msgid "IMU Sensit."
+msgstr "IMU感度"
+
+msgid "Very Low"
+msgstr "非常に低い"
+
+msgid "10s"
+msgstr "10秒"
+
+msgid "20s"
+msgstr "20秒"
+
+msgid "30s"
+msgstr "30秒"
+
+msgid "1m"
+msgstr "1分"
+
+msgid "2m"
+msgstr "2分"
+
+msgid "Format"
+msgstr "形式"
+
+msgid "Nav"
+msgstr "移動"
+
+msgid "Toggle"
+msgstr "トグル"
+
+msgid "Go"
+msgstr "選択"
+
+msgid "Del"
+msgstr "削除"
+
+msgid "   Catalogs"
+msgstr "   カタログ"
+
+msgid "  Mount Control"
+msgstr "  マウント制御"
+
+msgid "   Menus"
+msgstr "   メニュー"
+
+msgid "Degraded\nCheck Status"
+msgstr "パフォーマンス低下\n状態を確認"
+
+msgid "   Solver"
+msgstr "   ソルバー"
+
+msgid "   Webserver"
+msgstr "   Webサーバー"
+
+msgid "   IMU"
+msgstr "   慣性測定センサ"
+
+msgid "   Camera"
+msgstr "   カメラ"
 

@@ -722,7 +722,7 @@ msgid "AP Mode"
 msgstr ""
 
 #: PiFinder/ui/menu_structure.py:831
-msgid "PiFinder Type"
+msgid "EZTFinder Type"
 msgstr ""
 
 #: PiFinder/ui/menu_structure.py:838
@@ -856,6 +856,12 @@ msgstr ""
 #: PiFinder/ui/menu_structure.py:1006
 msgid "Spanish"
 msgstr ""
+
+msgid "Korean"
+msgstr "Korean"
+
+msgid "Japanese"
+msgstr "Japanese"
 
 #: PiFinder/ui/object_details.py:61 PiFinder/ui/object_details.py:66
 msgid "ALIGN"
@@ -1119,52 +1125,19 @@ msgstr ""
 #~ msgid "spanish"
 #~ msgstr ""
 
-#~ msgid "Nearest"
-#~ msgstr ""
-
-#~ msgid "Standard"
-#~ msgstr ""
-
-#~ msgid "Can't plot"
-#~ msgstr ""
-
 #~ msgid "Debug: Activated"
-#~ msgstr ""
-
-#~ msgid "Test Mode"
 #~ msgstr ""
 
 #~ msgid "Camera"
 #~ msgstr ""
 
-#~ msgid "Align"
-#~ msgstr ""
-
 #~ msgid "Comets"
-#~ msgstr ""
-
-#~ msgid "Status"
-#~ msgstr ""
-
-#~ msgid "Equipment"
-#~ msgstr ""
-
-#~ msgid "Console"
-#~ msgstr ""
-
-#~ msgid "Software Upd"
-#~ msgstr ""
-
-#~ msgid "Searching"
 #~ msgstr ""
 
 #~ msgid "yet{ellipsis}"
 #~ msgstr ""
 
 #~ msgid "for GPS{ellipsis}"
-#~ msgstr ""
-
-#~ msgid "Sz:{size}"
 #~ msgstr ""
 
 #~ msgid "Time: {0}"
