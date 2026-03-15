@@ -3,7 +3,9 @@
 
 from pathlib import Path
 from PIL import ImageFont
+from PiFinder import config
 
+cfg = config.Config()
 
 class Font:
     """
@@ -43,18 +45,28 @@ class Fonts:
         huge_size=35,
         screen_width=128,
     ):
-        font_path = str(Path(Path.cwd(), "../fonts"))
-        #boldttf = str(Path(font_path, "RobotoMonoNerdFontMono-Bold.ttf"))
-        boldttf = str(Path(font_path, "RobotoMonoNFM-Rg.ttf"))
-        #boldttf = str(Path(font_path, "NotoSerifKR-Light.ttf"))
-        #regularttf = str(Path(font_path, "RobotoMonoNerdFontMono-Regular.ttf"))
-        regularttf = str(Path(font_path, "RobotoMonoNFM-Bd.ttf"))
-        #regularttf = str(Path(font_path, "NotoSerifKR-Bold.ttf"))
 
-        self.base = Font(boldttf, base_size, screen_width)  # 10
-        self.bold = Font(boldttf, bold_size, screen_width)  # 12
-        self.large = Font(regularttf, large_size, screen_width)  # 15
-        self.small = Font(boldttf, small_size, screen_width)  # 8
-        self.huge = Font(boldttf, huge_size, screen_width)  # 35
+        lang = cfg.get_option("language", "en")
+
+        font_path = str(Path(Path.cwd(), "../fonts"))
+
+        if lang=="jp":
+            boldttf = str(Path(font_path, "NotoSerifJP-Bold.ttf"))        
+            regularttf = str(Path(font_path, "NotoSerifJP-Regular.ttf"))
+
+            self.base = Font(boldttf, base_size, screen_width)  # 9
+            self.bold = Font(boldttf, bold_size, screen_width)  # 10
+            self.large = Font(regularttf, large_size, screen_width)  # 12
+            self.small = Font(boldttf, small_size, screen_width)  # 7
+            self.huge = Font(boldttf, huge_size, screen_width)  # 30
+        else :
+            boldttf = str(Path(font_path, "RobotoMonoNFM-Bd.ttf"))
+            regularttf = str(Path(font_path, "RobotoMonoNFM-Rg.ttf"))
+
+            self.base = Font(boldttf, base_size, screen_width)  # 10
+            self.bold = Font(boldttf, bold_size, screen_width)  # 12
+            self.large = Font(regularttf, large_size, screen_width)  # 15
+            self.small = Font(boldttf, small_size, screen_width)  # 8
+            self.huge = Font(boldttf, huge_size, screen_width)  # 35
 
         self.icon_bold_large = Font(boldttf, int(base_size * 1.5), screen_width)  # 15

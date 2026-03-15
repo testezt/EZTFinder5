@@ -27,6 +27,7 @@ s = _("Language: en")
 s = _("Language: es")
 s = _("Language: fr")
 s = _("Language: ko")
+s = _("Language: jp")
 s = s
 del s
 
@@ -707,6 +708,10 @@ pifinder_menu = {
                                 {
                                     "name": _("Korean"),
                                     "value": "ko",
+                                },
+                                {
+                                    "name": _("Japanese"),
+                                    "value": "jp",
                                 },
                                 {
                                     "name": _("English"),

@@ -33,7 +33,7 @@ class UITextMenu(UIModule):
         self.marking_menu = MarkingMenu(
             left=MarkingMenuOption(),
             down=MarkingMenuOption(
-                label="Shutdown",
+                label=_("Shutdown"),
                 menu_jump="shutdown",
             ),
             right=MarkingMenuOption(),

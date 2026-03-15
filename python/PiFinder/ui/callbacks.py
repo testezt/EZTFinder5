@@ -204,6 +204,7 @@ def switch_language(ui_module: UIModule) -> None:
     )
     lang.install()
     logger.info("Switch Language: %s", iso2_code)
+    restart_system(ui_module)
 
 
 def go_wifi_ap(ui_module: UIModule) -> None:

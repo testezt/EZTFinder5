@@ -2,7 +2,9 @@ from typing import Tuple, List
 import textwrap
 import re
 import math
+from PiFinder import config
 
+cfg = config.Config()
 
 class SpaceCalculatorFixed:
     """Calculates spaces for fixed-width fonts"""
@@ -30,6 +32,12 @@ class SpaceCalculatorFixed:
         """
         lenleft = len(str(left))
         lenright = len(str(right))
+
+        lang = cfg.get_option("language", "en")
+        if lang =="jp":
+            lenleft = lenleft / 2 
+            lenright = lenright / 2
+
         spaces = max(0, self.width - (lenleft + lenright))
         if spaces <= 0:
             if empty_if_exceeds:
