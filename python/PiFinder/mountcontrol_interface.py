@@ -739,7 +739,7 @@ class MountControlBase:
             self.state = MountControlPhases.MOUNT_INIT_TELESCOPE
 
     def _process_phase(
-        self, retry_count: int = 3, delay: float = 1.0
+        self, retry_count: int = 3, delay: float = 5.0
     ) -> Iterator[None]:
         """Command the mount based on the current phase
 
@@ -810,6 +810,13 @@ class MountControlBase:
                     "Phase: -> MOUNT_TARGET_ACQUISITION_MOVE (mount was still moving)"
                 )
                 return
+
+            start_time = time.time()
+            
+            while (
+                    time.time() - start_time <= delay
+            ):
+                yield
 
             retries = retry_count
             # Wait until we have a solved image
