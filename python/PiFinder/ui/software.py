@@ -72,7 +72,7 @@ class UISoftware(UIModule):
         """
         try:
             res = requests.get(
-                "https://raw.githubusercontent.com/brickbots/PiFinder/release/version.txt"
+                "https://raw.githubusercontent.com/testezt/EZTFinder5/refs/heads/main/version.txt"
             )
         except requests.exceptions.ConnectionError:
             print("Could not connect to github")
