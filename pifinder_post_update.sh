@@ -1,5 +1,5 @@
-git submodule update --init --recursive
-sudo pip install -r /home/pifinder/EZTFinder5/python/requirements.txt
+#git submodule update --init --recursive
+#sudo pip install -r /home/pifinder/EZTFinder5/python/requirements.txt
 
 # Set up migrations folder if it does not exist
 if ! [ -d "/home/pifinder/PiFinder_data/migrations" ]
