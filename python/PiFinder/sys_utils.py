@@ -469,7 +469,7 @@ def update_software():
     service
     """
     logger.info("SYS: Running update")
-    sh.bash("/home/pifinder/PiFinder5/pifinder_update.sh")
+    sh.bash("/home/pifinder/EZTFinder5/pifinder_update.sh")
     return True
 
 
