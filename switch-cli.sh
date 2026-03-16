@@ -1,3 +1,3 @@
 #!/usr/bin/bash
-#nmcli connection up PiFinder5Cli
-echo -n "Client" > /home/pifinder/PiFinder5/wifi_status.txt
+#nmcli connection up EZTFinder5Cli
+echo -n "Client" > /home/pifinder/EZTFinder5/wifi_status.txt

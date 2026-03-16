@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 # Raspberry Pi OS bookworm required
-# This script installs the PiFinder5 software on a prepared Raspberry Pi OS.
+# This script installs the EZTFinder5 software on a prepared Raspberry Pi OS.
 # See https://pifinder.readthedocs.io/en/release/software.html for more info.
 
 
@@ -38,16 +38,16 @@ cd ~pifinder/
 
 sudo apt-get install -y git python3-pip samba samba-common-bin dnsmasq hostapd dhcpd gpsd
 
-if [[ -d PiFinder5/ ]]; then
-    cd PiFinder5/ && git config pull.rebase false && git pull
+if [[ -d EZTFinder5/ ]]; then
+    cd EZTFinder5/ && git config pull.rebase false && git pull
 else
-    git clone --recursive --branch release https://github.com/testezt/PiFinder5.git
+    git clone --recursive --branch release https://github.com/testezt/EZTFinder5.git
 fi
-cd ~/PiFinder5/ && pip3 install -r python/requirements.txt
+cd ~/EZTFinder5/ && pip3 install -r python/requirements.txt
 
 # Setup GPSD
 sudo dpkg-reconfigure -plow gpsd
-sudo cp ~/PiFinder5/pi_config_files/gpsd.conf /etc/default/gpsd
+sudo cp ~/EZTFinder5/pi_config_files/gpsd.conf /etc/default/gpsd
 
 # data dirs
 [[ -d ~/PiFinder_data ]] || \
@@ -65,21 +65,21 @@ mkdir ~/PiFinder_data/logs
 find ~/PiFinder_data -type d -exec chmod 755 {} \;
 
 # Wifi config
-#sudo cp ~/PiFinder5/pi_config_files/dhcpcd.* /etc
-#sudo cp ~/PiFinder5/pi_config_files/dhcpcd.conf.sta /etc/dhcpcd.conf
-#sudo cp ~/PiFinder5/pi_config_files/dnsmasq.conf /etc/dnsmasq.conf
-#sudo cp ~/PiFinder5/pi_config_files/hostapd.conf /etc/hostapd/hostapd.conf
-#echo -n "Client" > ~/PiFinder5/wifi_status.txt
+#sudo cp ~/EZTFinder5/pi_config_files/dhcpcd.* /etc
+#sudo cp ~/EZTFinder5/pi_config_files/dhcpcd.conf.sta /etc/dhcpcd.conf
+#sudo cp ~/EZTFinder5/pi_config_files/dnsmasq.conf /etc/dnsmasq.conf
+#sudo cp ~/EZTFinder5/pi_config_files/hostapd.conf /etc/hostapd/hostapd.conf
+#echo -n "Client" > ~/EZTFinder5/wifi_status.txt
 #sudo systemctl unmask hostapd
 
 # open permissisons on wpa_supplicant file so we can adjust network config
 # sudo chmod 666 /etc/wpa_supplicant/wpa_supplicant.conf
 
 # Samba config
-sudo cp ~/PiFinder5/pi_config_files/smb.conf /etc/samba/smb.conf
+sudo cp ~/EZTFinder5/pi_config_files/smb.conf /etc/samba/smb.conf
 
 # Hipparcos catalog
-HIP_MAIN_DAT="/home/pifinder/PiFinder5/astro_data/hip_main.dat"
+HIP_MAIN_DAT="/home/pifinder/EZTFinder5/astro_data/hip_main.dat"
 if [[ ! -e $HIP_MAIN_DAT ]]; then
     wget -O $HIP_MAIN_DAT https://cdsarc.cds.unistra.fr/ftp/cats/I/239/hip_main.dat
 fi
@@ -95,14 +95,14 @@ grep -q "dtoverlay=pwm,pin=13,func=4" /boot/config.txt || \
    echo "dtoverlay=pwm,pin=13,func=4" | sudo tee -a /boot/config.txt
 grep -q "dtoverlay=uart3" /boot/config.txt || \
    echo "dtoverlay=uart3" | sudo tee -a /boot/config.txt
-# Note: camera types are added lateron by python/PiFinder5/switch_camera.py
+# Note: camera types are added lateron by python/EZTFinder5/switch_camera.py
 
 # Disable unwanted services
 sudo systemctl disable ModemManager
 
 # Enable service
-sudo cp /home/pifinder/PiFinder5/pi_config_files/pifinder.service /lib/systemd/system/pifinder.service
-sudo cp /home/pifinder/PiFinder5/pi_config_files/pifinder_splash.service /lib/systemd/system/pifinder_splash.service
+sudo cp /home/pifinder/EZTFinder5/pi_config_files/pifinder.service /lib/systemd/system/pifinder.service
+sudo cp /home/pifinder/EZTFinder5/pi_config_files/pifinder_splash.service /lib/systemd/system/pifinder_splash.service
 sudo systemctl daemon-reload
 sudo systemctl enable pifinder
 sudo systemctl enable pifinder_splash

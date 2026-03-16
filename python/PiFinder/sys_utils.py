@@ -166,9 +166,9 @@ class Network:
             with open('/tmp/switch-ap.sh', 'w') as f:
                 f.write("#! /usr/bin/bash\n")
                 f.write("nmcli connection up "+ssid+"\n")
-                f.write('echo -n "AP" > /home/pifinder/PiFinder5/wifi_status.txt')
+                f.write('echo -n "AP" > /home/pifinder/EZTFinder5/wifi_status.txt')
             
-            sh.sudo("cp","/tmp/switch-ap.sh","/home/pifinder/PiFinder5/switch-ap.sh")
+            sh.sudo("cp","/tmp/switch-ap.sh","/home/pifinder/EZTFinder5/switch-ap.sh")
 
         else:'''
 
@@ -188,7 +188,7 @@ class Network:
             Network.set_client_priority("1")
             Network.set_ap_priority("0")
             
-            sh.sudo("/home/pifinder/PiFinder5/switch-cli.sh")
+            sh.sudo("/home/pifinder/EZTFinder5/switch-cli.sh")
 
     def set_client_priority(flag):
         
