@@ -178,6 +178,7 @@ class MountControlBase:
         self.mount_queue = mount_queue
         self.console_queue = console_queue
         self.shared_state = shared_state
+        self.max_refine_steps = 5
 
         self.current_ra: Optional[float] = (
             None  # Mount current Right Ascension in degrees, or None
@@ -469,6 +470,7 @@ class MountControlBase:
     #
     def _stop_mount(self) -> bool:
         if self.state != MountControlPhases.MOUNT_STOPPED:
+            max_refine_steps = 5
             # Reset drift compensation data when stopping
             if self.state == MountControlPhases.MOUNT_DRIFT_COMPENSATION:
                 self._reset_drift_compensation_data()
@@ -481,6 +483,7 @@ class MountControlBase:
         self, direction: MountDirections, step_size_deg: float
     ) -> bool:
         """Convert string direction to enum and move mount manually."""
+        max_refine_steps = 5
         # Convert string to enum if needed (case-insensitive)
         if isinstance(direction, str):
             direction_upper = direction.upper()
@@ -519,6 +522,7 @@ class MountControlBase:
                 self.state != MountControlPhases.MOUNT_TRACKING
                 and self.state != MountControlPhases.MOUNT_DRIFT_COMPENSATION
             ):
+                max_refine_steps = 5
                 self.state = MountControlPhases.MOUNT_TRACKING
                 logger.debug("Phase: -> MOUNT_TRACKING due to manual movement")
         return success
@@ -774,6 +778,7 @@ class MountControlBase:
             # Clear the init solve coordinates after successful initialization
             self.init_solve_ra = None
             self.init_solve_dec = None
+            max_refine_steps = 5
             self.state = MountControlPhases.MOUNT_TRACKING
             logger.debug("Phase: -> MOUNT_TRACKING")
             return
@@ -811,6 +816,15 @@ class MountControlBase:
                 )
                 return
 
+            max_refine_steps = max_refine_steps - 1
+            if max_refine_steps < 0 :
+                max_refine_steps = 5
+                logger.error("Failed to reach to the target after move (after retrying).")
+                self.console_queue.put(["WARNING", _("Faile to reach!")])
+                self.state = MountControlPhases.MOUNT_TRACKING
+                logger.debug("Phase: -> MOUNT_TRACKING")
+                return
+
             start_time = time.time()
             
             while (
@@ -839,6 +853,7 @@ class MountControlBase:
                 # Retries exceeded?
                 retries -= 1
                 if retries <= 0:
+                    max_refine_steps = 5
                     logger.error("Failed to solve after move (after retrying).")
                     self.console_queue.put(["WARNING", _("Solve failed!")])
                     self.state = MountControlPhases.MOUNT_TRACKING
@@ -872,6 +887,7 @@ class MountControlBase:
                 logger.info(
                     f"Phase REFINE: Target acquired within {self.target_tolerance_deg} degrees on both axes, starting drift compensation."
                 )
+                max_refine_steps = 5
                 self.state = MountControlPhases.MOUNT_DRIFT_COMPENSATION
                 # Reset drift compensation data when entering this phase
                 self._reset_drift_compensation_data()
@@ -958,6 +974,7 @@ class MountControlBase:
                         logger.error(
                             "Failed to command mount to move to target (after retrying)."
                         )
+                        max_refine_steps = 5
                         self.console_queue.put(["WARNING", _("Cannot move to target!")])
                         self.state = MountControlPhases.MOUNT_TRACKING
                         return
@@ -1068,6 +1085,7 @@ class MountControlBase:
                                 logger.error(
                                     "Failed to adjust drift rates after retrying."
                                 )
+                                max_refine_steps = 5
                                 self.console_queue.put(["WARNING", _("Drift failure!")])
                                 self.state = MountControlPhases.MOUNT_TRACKING
                                 # Reset drift compensation data
