@@ -1096,19 +1096,19 @@ msgstr "클라이언트 모드"
 
 #: PiFinder/ui/software.py:160
 msgid "Checking for"
-msgstr "확인중"
+msgstr "업데이트"
 
 #: PiFinder/ui/software.py:166
 msgid "updates{elipsis}"
-msgstr ""
+msgstr "확인중{elipsis}"
 
 #: PiFinder/ui/software.py:182
 msgid "No Update"
-msgstr "업데이트 없음"
+msgstr "업데이트"
 
 #: PiFinder/ui/software.py:188
 msgid "needed"
-msgstr "needed"
+msgstr "필요없음"
 
 #: PiFinder/ui/software.py:198
 msgid "Update Now"
