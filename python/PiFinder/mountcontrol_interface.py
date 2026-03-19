@@ -911,6 +911,8 @@ class MountControlBase:
                     self.state = MountControlPhases.MOUNT_TRACKING
                     logger.debug("Phase: -> MOUNT_TRACKING")
                     return
+                else :
+                    time.sleep(2)
 
             if (
                 abs(self.current_ra - solution["RA_target"]) <= self.target_tolerance_deg
