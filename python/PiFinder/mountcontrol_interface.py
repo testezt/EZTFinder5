@@ -178,7 +178,7 @@ class MountControlBase:
         self.mount_queue = mount_queue
         self.console_queue = console_queue
         self.shared_state = shared_state
-        self.max_refine_steps = 5
+        self.max_refine_steps = 4
 
         self.current_ra: Optional[float] = (
             None  # Mount current Right Ascension in degrees, or None
@@ -469,8 +469,8 @@ class MountControlBase:
     # Helper methods to decorate mount control methods with state management
     #
     def _stop_mount(self) -> bool:
+        self.max_refine_steps = 4
         if self.state != MountControlPhases.MOUNT_STOPPED:
-            max_refine_steps = 5
             # Reset drift compensation data when stopping
             if self.state == MountControlPhases.MOUNT_DRIFT_COMPENSATION:
                 self._reset_drift_compensation_data()
@@ -483,7 +483,6 @@ class MountControlBase:
         self, direction: MountDirections, step_size_deg: float
     ) -> bool:
         """Convert string direction to enum and move mount manually."""
-        max_refine_steps = 5
         # Convert string to enum if needed (case-insensitive)
         if isinstance(direction, str):
             direction_upper = direction.upper()
@@ -522,9 +521,9 @@ class MountControlBase:
                 self.state != MountControlPhases.MOUNT_TRACKING
                 and self.state != MountControlPhases.MOUNT_DRIFT_COMPENSATION
             ):
-                max_refine_steps = 5
                 self.state = MountControlPhases.MOUNT_TRACKING
                 logger.debug("Phase: -> MOUNT_TRACKING due to manual movement")
+                self.max_refine_steps = 4
         return success
 
     def _goto_target(self, target_ra, target_dec) -> bool:
@@ -778,9 +777,9 @@ class MountControlBase:
             # Clear the init solve coordinates after successful initialization
             self.init_solve_ra = None
             self.init_solve_dec = None
-            max_refine_steps = 5
             self.state = MountControlPhases.MOUNT_TRACKING
             logger.debug("Phase: -> MOUNT_TRACKING")
+            self.max_refine_steps = 4
             return
 
         elif (
@@ -816,22 +815,32 @@ class MountControlBase:
                 )
                 return
 
-            max_refine_steps = max_refine_steps - 1
-            if max_refine_steps < 0 :
-                max_refine_steps = 5
+            logger.info(
+                        f"Phase REFINE: Retries Left {self.max_refine_steps}."
+                    )
+
+            self.max_refine_steps = self.max_refine_steps - 1
+            if self.max_refine_steps < 0 :
+                self.max_refine_steps = 4
                 logger.error("Failed to reach to the target after move (after retrying).")
                 self.console_queue.put(["WARNING", _("Faile to reach!")])
                 self.state = MountControlPhases.MOUNT_TRACKING
                 logger.debug("Phase: -> MOUNT_TRACKING")
                 return
 
-            start_time = time.time()
+            time.sleep(delay) 
+
+            logger.info(
+                    "Phase: -> MOUNT_TARGET_ACQUISITION_REFINE delay"
+                )
+
+            '''start_time = time.time(delay)
             
             while (
                     time.time() - start_time <= delay
             ):
                 yield
-
+            '''
             retries = retry_count
             # Wait until we have a solved image
             while (
@@ -853,7 +862,7 @@ class MountControlBase:
                 # Retries exceeded?
                 retries -= 1
                 if retries <= 0:
-                    max_refine_steps = 5
+                    self.max_refine_steps = 4
                     logger.error("Failed to solve after move (after retrying).")
                     self.console_queue.put(["WARNING", _("Solve failed!")])
                     self.state = MountControlPhases.MOUNT_TRACKING
@@ -887,10 +896,10 @@ class MountControlBase:
                 logger.info(
                     f"Phase REFINE: Target acquired within {self.target_tolerance_deg} degrees on both axes, starting drift compensation."
                 )
-                max_refine_steps = 5
                 self.state = MountControlPhases.MOUNT_DRIFT_COMPENSATION
                 # Reset drift compensation data when entering this phase
                 self._reset_drift_compensation_data()
+                self.max_refine_steps = 4
                 return
             else:
                 # We are off by more than 0.01 degrees in at least one axis, so we need to sync the mount and move again.
@@ -945,6 +954,8 @@ class MountControlBase:
 
                 logger.info("Phase REFINE: Sync successful.")
 
+                time.sleep(2) 
+
                 ##
                 ## Now move again to the original target position
                 ##
@@ -974,9 +985,9 @@ class MountControlBase:
                         logger.error(
                             "Failed to command mount to move to target (after retrying)."
                         )
-                        max_refine_steps = 5
                         self.console_queue.put(["WARNING", _("Cannot move to target!")])
                         self.state = MountControlPhases.MOUNT_TRACKING
+                        self.max_refine_steps = 4
                         return
                     elif (
                         self.state == MountControlPhases.MOUNT_TARGET_ACQUISITION_REFINE
@@ -1085,9 +1096,9 @@ class MountControlBase:
                                 logger.error(
                                     "Failed to adjust drift rates after retrying."
                                 )
-                                max_refine_steps = 5
                                 self.console_queue.put(["WARNING", _("Drift failure!")])
                                 self.state = MountControlPhases.MOUNT_TRACKING
+                                self.max_refine_steps = 4
                                 # Reset drift compensation data
                                 self._reset_drift_compensation_data()
                                 return
