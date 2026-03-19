@@ -880,13 +880,38 @@ class MountControlBase:
                     )
                     return  # State changed, exit
 
-            # We have a solution, check how far off we are from the target ...
+            # We have a solution, check if this is CAM result ...
             solution = self.shared_state.solution()
             logger.debug(
-                "Phase REFINE: Solve received. RA_target = %f, Dec_target = %f",
+                "Phase REFINE: Solve received. RA_target = %f, Dec_target = %f, Source = %s",
                 solution["RA_target"],
                 solution["Dec_target"],
+                solution["solve_source"],
             )
+
+            retries = retry_count
+            while (retries > 0 
+                   and solution["solve_source"] != "CAM"):
+
+                # We have a solution, check if this is CAM result ...
+                solution = self.shared_state.solution()
+                logger.debug(
+                    "Phase REFINE: Solve received. RA_target = %f, Dec_target = %f, Source = %s",
+                    solution["RA_target"],
+                    solution["Dec_target"],
+                    solution["solve_source"],
+                )
+
+                retries -= 1
+
+                if retries <= 0:
+                    self.max_refine_steps = 4
+                    logger.error("Failed to solve after move (after retrying).")
+                    self.console_queue.put(["WARNING", _("Solve failed!")])
+                    self.state = MountControlPhases.MOUNT_TRACKING
+                    logger.debug("Phase: -> MOUNT_TRACKING")
+                    return
+
             if (
                 abs(self.current_ra - solution["RA_target"]) <= self.target_tolerance_deg
                 and abs(self.current_dec - solution["Dec_target"]) <= self.target_tolerance_deg
