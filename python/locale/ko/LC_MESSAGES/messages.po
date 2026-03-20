@@ -944,11 +944,11 @@ msgstr "  {logs} 로그"
 #: PiFinder/ui/object_details.py:244
 
 msgid "No solve"
-msgstr "솔빙 되지 않음"
+msgstr "아직 솔빙 되지"
 
 #: PiFinder/ui/object_details.py:250
 msgid "yet{elipsis}"
-msgstr ""
+msgstr "않음{elipsis}"
 
 #: PiFinder/ui/object_details.py:264
 
