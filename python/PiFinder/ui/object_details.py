@@ -643,9 +643,16 @@ class UIObjectDetails(UIModule):
             solution = self.shared_state.solution()
             dt = self.shared_state.datetime()
             if dt is None:
-                mc_logger.error("UI: Falling back to system time")
-                dt = datetime.datetime.now(datetime.timezone.utc)
+                #mc_logger.error("UI: Falling back to system time")
+                #dt = datetime.datetime.now(datetime.timezone.utc)
+                mc_logger.warning("UI: Cannot sync mount - no datetime available")
+                return
+
             if solution:
+                if solution["solve_source"] != "CAM" :
+                    mc_logger.warning("UI: Cannot sync mount - no solution available")
+                    return
+
                 RA_jnow, Dec_jnow = calc_utils.j2000_to_jnow(
                     solution["RA_target"], solution["Dec_target"], dt
                 )
@@ -658,7 +665,7 @@ class UIObjectDetails(UIModule):
                 )
             else:
                 mc_logger.warning("UI: Cannot sync mount - no solution available")
-                self.command_queues.get("console").put({"warning", "No solve"})
+                #self.command_queues.get("console").put({"warning", "No solve"})
         elif number == 8:
             mc_logger.debug("UI: Moving mount north")
             # North
