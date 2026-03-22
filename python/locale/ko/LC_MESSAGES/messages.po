@@ -953,10 +953,10 @@ msgstr "않음{elipsis}"
 #: PiFinder/ui/object_details.py:264
 
 msgid "Searching"
-msgstr "검색중"
+msgstr "GPS"
 
 #: PiFinder/ui/object_details.py:270
-msgid "for GPS{elipsis}"
+msgid "검색중{elipsis}"
 msgstr ""
 
 #: PiFinder/ui/object_details.py:284
