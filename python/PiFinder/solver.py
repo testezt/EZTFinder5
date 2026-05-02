@@ -23,7 +23,6 @@ from PiFinder import utils
 
 sys.path.append(str(utils.tetra3_dir))
 import tetra3
-import cedar_detect_client
 
 logger = logging.getLogger("Solver")
 
@@ -78,20 +77,6 @@ def solver(
     while True:
         logger.info("Starting Solver Loop")
         # Start cedar detect server
-        try:
-            cedar_detect = cedar_detect_client.CedarDetectClient(
-                binary_path=str(utils.cwd_dir / "../bin/cedar-detect-server-")
-                + shared_state.arch()
-            )
-        except FileNotFoundError as e:
-            logger.warning(
-                "Not using cedar_detect, as corresponding file '%s' could not be found",
-                e.filename,
-            )
-            cedar_detect = None
-        except ValueError:
-            logger.exception("Not using cedar_detect")
-            cedar_detect = None
 
         try:
             while True:
@@ -135,13 +120,8 @@ def solver(
                     np_image = np.asarray(img, dtype=np.uint8)
 
                     t0 = precision_timestamp()
-                    if cedar_detect is None:
-                        # Use old tetr3 centroider
-                        centroids = tetra3.get_centroids_from_image(np_image)
-                    else:
-                        centroids = cedar_detect.extract_centroids(
-                            np_image, sigma=8, max_size=10, use_binned=True
-                        )
+                    # Use old tetr3 centroider
+                    centroids = tetra3.get_centroids_from_image(np_image)
                     t_extract = (precision_timestamp() - t0) * 1000
                     logger.debug(
                         "File %s, extracted %d centroids in %.2fms"
