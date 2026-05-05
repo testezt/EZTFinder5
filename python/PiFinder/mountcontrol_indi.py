@@ -456,7 +456,7 @@ class PiFinderIndiClient(PyIndi.BaseClient):
             if (
                 any(
                     keyword in device_name
-                    for keyword in ["telescope", "mount", "eqmod", "lx200", "celestron"]
+                    for keyword in ["telescope", "mount", "eqmod", "lx200", "celestron", "zwo"]
                 )
                 or device_name == "telescope simulator"
             ):
