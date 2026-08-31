@@ -453,17 +453,17 @@ class PiFinderIndiClient(PyIndi.BaseClient):
         device_name = device.getDeviceName().lower()
         # Match telescope/mount devices, but exclude CCD and Focuser simulators
         if self.telescope_device is None:
-            if (
+            '''if (
                 any(
                     keyword in device_name
                     for keyword in ["telescope", "mount", "eqmod", "lx200", "celestron", "zwo"]
                 )
                 or device_name == "telescope simulator"
-            ):
-                self.telescope_device = device
-                clientlogger.info(
-                    f"Telescope device detected: {device.getDeviceName()}"
-                )
+            ):'''
+            self.telescope_device = device
+            clientlogger.info(
+                f"Telescope device detected: {device.getDeviceName()}"
+            )
 
     def removeDevice(self, device):
         """Called when a device is removed from the INDI server."""
